@@ -1,0 +1,22 @@
+/* Contorno nas imagens de suplementos */
+.suplementos-imagens img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #333; /* Contorno em volta de cada imagem */
+    border-radius: 8px; /* Bordas arredondadas para suavizar o visual */
+    margin: 5px; /* Espaçamento ao redor de cada imagem */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar */
+}
+
+/* Ajuste de espaçamento e centralização dos preços */
+.suplementos-precos {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.suplementos-precos span {
+    font-size: 16px;
+    font-weight: bold;
+}

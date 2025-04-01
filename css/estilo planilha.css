@@ -1,0 +1,66 @@
+.planos-treino {
+    padding: 20px;
+}
+
+.planos-treino h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.plano {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+}
+
+.plano h3 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.plano p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+/* Dispositivos móveis (celulares) */
+@media (max-width: 767px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .suplementos-imagens {
+    flex-direction: column;
+  }
+  .suplementos-imagens img {
+    width: 100%;
+  }
+}
+
+/* Dispositivos tablet (tela entre 768px e 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+/* Dispositivos computadores (tela maior que 1024px) */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 80px;
+  }
+  .main-content {
+    margin-left: 80px;
+  }
+}
