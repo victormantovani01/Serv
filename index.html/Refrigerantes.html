@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet"/>
+<title>Serv-festa Oficial</title>
+<!-- Adicionando o favicon -->
+<link href="Imagens/WhatsApp Image 2024-10-21 at 19.12.21.jpeg" rel="icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+
+        /* Centraliza o título mais para cima */
+        .header {
+            text-align: center;
+            padding-top: 10px; /* Ajuste para espaçamento superior menor */
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 5px; /* Pequena margem abaixo */
+        }
+
+           /* Para telas menores que 768px (exemplo: celulares) */
+    @media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    }
+
+    .container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna no celular */
+    align-items: center;
+    }
+
+        /* Estilização da barra lateral */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 80px;
+            background-color: #000; /* Ajustado para preto */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+        }
+
+        .sidebar a {
+            text-decoration: none;
+            color: white; /* Cor do texto ajustada para branco */
+            text-align: center;
+            padding: 20px 0;
+            width: 100%;
+            transition: background 0.3s;
+        }
+
+        .sidebar a:hover {
+            background-color: #333;
+        }
+
+        .sidebar i {
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        .sidebar span {
+            font-size: 12px;
+        }
+
+        /* Submenu para Vestes */
+        .submenu {
+            display: none;
+            flex-direction: column;
+            background-color: #111;
+            width: 100%;
+        }
+
+        .sidebar a:hover + .submenu, .submenu:hover {
+            display: flex;
+        }
+
+        .submenu a {
+            padding: 10px 0;
+            font-size: 10px;
+            color: white;
+        }
+
+        /* Ajuste para o espaço da barra lateral */
+        .main-content {
+            margin-left: 80px;
+            padding: 20px;
+        }
+
+        /* Linha abaixo do título */
+        hr {
+            margin: 0;
+            border: 1px solid #000; /* Cor preta */
+            width: 100%; /* Linha agora vai de ponta a ponta */
+        }
+
+        /* Estilo da seção de suplementos */
+        .suplementos-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .suplementos-section h2 {
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .suplementos-section p {
+            font-size: 18px;
+            width: 80%;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+
+        /* Estilo das imagens e dos preços */
+        .suplementos-imagens {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .suplementos-imagens img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Espaçamento entre fileiras de imagens */
+        .suplementos-fileira {
+            margin-bottom: 40px; /* Espaçamento entre as fileiras de imagens */
+        }
+
+        .suplementos-precos {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 10px;
+        }
+
+        .suplementos-precos span {
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+<!-- Barra lateral -->
+<div class="sidebar">
+<a href="index.html">
+<i class="fas fa-home"></i>
+<span>Início</span>
+</a>
+<!-- Vestes com subitens -->
+<a href="#">
+<i class=""></i>
+<span>Destilados</span>
+</a>
+<div class="submenu">
+<a href="Bebidas.html">- Bebidas</a>
+<a href="CoquetéiseDrinks.html">- Drinks e Coqueteis</a>
+</div>
+<a href="Cervejas.html">
+<i class=""></i>
+<span>Cervejas</span>
+</a>
+<a href="sucos.html">
+<i class=""></i>
+<span>sucos</span>
+</a>
+<a href="Refrigerantes.html">
+<i class=""></i>
+<span>Refrigerantes</span>
+</a>
+<a href="comidas.html">
+<i class=""></i>
+<span>comidas</span>
+</a>
+<a href="Cadastro.html">
+<i class=""></i>
+<span>Cadastro</span>
+</a>
+</div>
+<!-- Conteúdo principal -->
+<div class="main-content">
+<div class="header">
+<h1>Refrigerantes</h1>
+<hr/> <!-- Linha agora vai de ponta a ponta -->
+</div>
+<!-- Seção de Suplementos -->
+<div class="suplementos-section">
+<h2>Sobre</h2>
+<p>
+                Encontre os melhores Refrigerantes  para você.
+            </p>
+<!-- Primeira fileira de imagens -->
+<div class="suplementos-fileira">
+<div class="suplementos-imagens">
+<img alt="Refrigerante 1" src="Imagens/Refrigerantes/coca cola.png" style="width: 180px; height: 180px; object-fit: cover;"/>
+<h6>2L <br/> R$8,00</h6>
+<img alt="Refrigerante 2" src="Imagens/Refrigerantes/coca-cola-lata.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>350ML <br/> R$5,00</span>
+<img alt="Refrigerante 3" src="Imagens/Refrigerantes/cotuba.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>2L <br/> R$7,00</span>
+<img *="" alt="Refrigerante 4" src="Imagens/Refrigerantes/guarana-jesus-lata.webp" style="width: 180px; height: 180px; object-fit: cover;">
+<span>350ML <br/> R$8,00</span>
+</div>
+
+<!-- Segunda fileira de imagens -->
+<div class="suplementos-fileira">
+<div class="suplementos-imagens">
+<img alt="Refrigerante 5" src="Imagens/Refrigerantes/fanta uva.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>2L <br/> R$7,00</span>
+<img alt="Refrigerante 6" src="Imagens/Refrigerantes/fanta.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>2L <br/> R$7,00</span>
+<img alt="Refrigerante 7" src="Imagens/Refrigerantes/fanta-laranja-lata.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>350ML <br/> R$5,00</span>
+<img alt="Refrigerante 8" src="Imagens/Refrigerantes/fanta-uva-lata.avif" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>350ML <br/> R$5,00</span>
+</div>
+
+<!-- Terceira fileira de imagens -->
+<div class="suplementos-fileira">
+<div class="suplementos-imagens">
+<img *="" alt="Refrigerante 9" src="Imagens/Refrigerantes/sprite-lata.jpg" style="width: 180px; height: 180px; object-fit: cover;">
+<span>350ML <br/> R$5,00</span>
+<img alt="Refrigerante 10" src="Imagens/Refrigerantes/H20H.jpg" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>1,5L <br/> R$8,00</span>
+<img alt="Refrigerante 11" src="Imagens/Refrigerantes/itubaina.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>2L <br/> R$8,00</span>
+<img alt="Refrigerante 12" src="Imagens/Refrigerantes/jesus-guarana.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>2L <br/> R$8,00</span>
+</img>
+</div>
+
+<div class="suplementos-fileira">
+<div class="suplementos-imagens">
+<img *="" alt="Suplemento 13" src="Imagens/Refrigerantes/guarana.avif" style="width: 180px; height: 180px; object-fit: cover;">
+<span>2L <br/> R$7,00</span>
+<img *="" alt="Refrigerante 14" src="Imagens/Refrigerantes/guarana-lata.webp" style="width: 180px; height: 180px; object-fit: cover;">
+<span>350ML <br/> R$5,00</span>
+<img alt="Refrigerante 15" src="Imagens/Refrigerantes/pepsi.avif" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span>2L <br/> R$8,00</span>
+<img alt="Refrigerante 16" src="Imagens/Refrigerantes/pepsi-lata.jpg" style="width: 180px; height: 180px; object-fit: cover;"/>
+<span> 350ML <br/> R$5,00</span>
+</img></img></div>
+
+<link href="css/estilo suplemetos.css" rel="stylesheet"/> <!-- Link para o seu CSS --></div></div></body></html>

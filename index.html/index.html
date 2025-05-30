@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" rel="stylesheet"/>
+<title>Serv-festa Oficial</title>
+<!-- Adicionando o favicon -->
+<link href="Imagens/WhatsApp Image 2024-10-21 at 19.12.21.jpeg" rel="icon"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<style>
+        
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+        }
+        .header {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .header h1 {
+            font-size: 48px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+
+           /* Para telas menores que 768px (exemplo: celulares) */
+    @media (max-width: 700px) {
+    body {
+        font-size: 16px;
+        background-color: #f0f0f0;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    }
+
+    .container {
+    display: flex;
+    flex-direction: column; /* Coloca os itens em coluna no celular */
+    align-items: center;
+    }
+      
+
+       /* BARRA LATERAL */
+.sidebar {
+  background-color: #000;
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  z-index: 999;
+}
+
+.sidebar a {
+  color: #160f0f;
+  text-align: center;
+  padding: 15px 0;
+  text-decoration: none;
+  width: 100%;
+  font-size: 14px;
+}
+
+.sidebar a:hover {
+  background: #333;
+}
+
+.sidebar i {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+/* SUBMENU */
+.submenu {
+  display: none;
+  flex-direction: column;
+  width: 100%;
+  background-color: #111;
+}
+
+.sidebar a:hover + .submenu,
+.submenu:hover {
+  display: flex;
+}
+
+.submenu a {
+  padding: 10px;
+  font-size: 12px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 5px 0;
+  }
+
+  .sidebar a {
+    padding: 10px 5px;
+    font-size: 12px;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #111;
+    width: 100%;
+    z-index: 998;
+  }
+}
+
+        /* Submenu para Vestes */
+        .submenu {
+            display: none;
+            flex-direction: column;
+            background-color: #111;
+            width: 100%;
+        }
+
+        .sidebar a:hover + .submenu, .submenu:hover {
+            display: flex;
+        }
+
+        .submenu a {
+            padding: 10px 0;
+            font-size: 10px;
+            color: white;
+        }
+
+        /* Ajuste para o espaço da barra lateral */
+        .main-content {
+            margin-left: 80px;
+            padding: 10px;
+        }
+
+        /* Linha abaixo do título */
+        hr {
+            margin: 0;
+            border: 1px solid #000;
+            width: 100%;
+        }
+
+        /* Seção de produtos mais vendidos */
+        .mais-vendidos, .mais-populares {
+            margin-top: 40px;
+        }
+
+        .mais-vendidos h2, .mais-populares h2 {
+            text-align: center;
+            font-size: 36px;
+            font-weight: bold;
+        }
+
+        .produtos-imagens {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .produtos-imagens img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Seção de produtos mais populares */
+        .mais-populares-linha {
+            margin-top: 20px;
+        }
+
+        /* Estilo para a última seção com imagem e texto */
+        .imagem-texto {
+            display: flex;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .imagem-texto img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .texto-lado {
+            max-width: 600px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        /* GERAL */
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* BARRA LATERAL */
+.sidebar {
+  background-color: #000;
+  width: 80px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  z-index: 999;
+}
+
+.sidebar a {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  text-decoration: none;
+  width: 100%;
+}
+
+.sidebar a:hover {
+  background: #333;
+}
+
+.sidebar span {
+  font-size: 12px;
+}
+
+/* MAIN CONTENT */
+.main-content {
+  margin-left: 80px;
+  padding: 10px;
+}
+
+/* PRODUTOS */
+.produtos-imagens {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* SOBRE */
+.imagem-texto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.footer {
+  background: #000;
+  color: #fff;
+  padding: center;
+  margin-top: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center;
+  gap: 20px;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
+    width: 100%;
+    height: auto;
+}
+
+.footer a {
+  color: #0af;
+  text-decoration: none;
+  display: block;
+  margin: 5px 0;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    width: 100%;
+    
+  }
+}
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .sidebar {
+    flex-direction: row;
+    width: 100%;
+    height: auto;
+    position: relative;
+    justify-content: space-around;
+  }
+
+  .main-content {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .imagem-texto {
+    flex-direction: column;
+  }
+
+  .imagem-texto img {
+    width: 90%;
+    height: auto;
+  }
+
+  .produtos-imagens {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+    </style>
+</head>
+<body>
+<div class="conteudo">
+</div>
+<!-- Barra lateral -->
+<div class="sidebar">
+<a href="index.html">
+<i class="fas fa-home"></i>
+<span>Início</span>
+</a>
+<!-- Vestes com subitens -->
+<a href="#">
+<i class=""></i>
+<span>Destilados</span>
+</a>
+<div class="submenu">
+<a href="Bebidas.html">- Bebidas</a>
+<a href="CoquetéiseDrinks.html">- Drinks e Coqueteis</a>
+</div>
+<a href="Cervejas.html">
+<i class=""></i>
+<span>Cervejas</span>
+</a>
+<a href="sucos.html">
+<i class=""></i>
+<span>sucos</span>
+</a>
+<a href="Refrigerantes.html">
+<i class=""></i>
+<span>Refrigerantes</span>
+</a>
+<a href="comidas.html">
+<i class=""></i>
+<span>comidas</span>
+</a>
+<a href="Cadastro.html">
+<i class=""></i>
+<span>Cadastro</span>
+</a>
+</div>
+<!-- Conteúdo principal -->
+<div class="main-content">
+<div class="header">
+<h1>Serv-festa Oficial</h1>
+<hr/> <!-- Linha agora vai de ponta a ponta -->
+</div>
+<!-- Seção "Os Mais Vendidos" -->
+<div class="mais-vendidos">
+<h2>Promoções</h2>
+<div class="produtos-imagens">
+<img alt="Promoção 1" src="Imagens/index/smirnoff ice.jpg" style="width: 180px; height: 180px; object-fit: cover;"/>
+<img alt="Promoção 2" src="Imagens/Cervejas/brahma.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<img alt="Promoção 3" src="Imagens/Cervejas/budweiser.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+</div>
+</div>
+<!-- Seção "Os Mais Populares" -->
+<div class="mais-Pedidos">
+<h1></h1>
+<div class="mais-populares-linha produtos-imagens">
+<img alt="Promoção 4" src="Imagens/Bebidas/WhiskyJameson.jpg" style="width: 180px; height: 180px; object-fit: cover;"/>
+<img alt="Promoção 5" src="Imagens/Bebidas/whiskyoldparr.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<img alt="Promoção 6" src="Imagens/Bebidas/whiskyballantines.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+</div>
+<div class="mais-Pedidos produtos-imagens">
+<img alt="Promoção 8" src="Imagens/Coquetéis/coquetel 6.webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<img alt="Promoção 9" src="Imagens/Coquetéis/coquetel 15 (11).webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+<img alt="Promoção 7" src="Imagens/Coquetéis/coquetel 09 (5).webp" style="width: 180px; height: 180px; object-fit: cover;"/>
+</div>
+</div>
+<!-- Seção com imagem e texto ao lado -->
+<div class="imagem-texto">
+<img alt="Imagem 12" src="Imagens/index/balada-em-cancun.jpg" style="width: 180px; height: 180px; object-fit: cover;"/>
+<div class="texto-lado">
+<h3>Sobre a Empresa</h3>
+<p>
+<strong>Visão</strong><br/>
+                    Ser referência em bebias que inspira conexão, promovendo uma comunidade onde amizade e parceria são a base para o bem-estar.
+                </p>
+<p>
+                    Nossa missão é proporcionar praticidade, eficiência e confiança para que você atinja seus objetivos com a segurança de contar com um parceiro leal em cada etapa do caminho.
+                    Com o serv-festa Oficial, você encontra mais lazer e amizades novas em um so lugar.
+                </p>
+<p>
+<strong>Valores</strong><br/>
+<ul>
+<li><strong>Amizade</strong> - Cada cliente é parte da família Oficial Brasil, criando um ambiente acolhedor.</li>
+<li><strong>Parceria</strong> - Valorizamos a colaboração, incentivando clientes e equipe a evoluírem juntos.</li>
+<li><strong>Qualidade</strong> - Variacoes de Bebidas com alcool e sem alcool, construindo confiança em nossa Empresa.</li>
+<li><strong>Inspiração</strong> - Estimulamos o bem-estar físico e mental com estilo e funcionalidade.</li>
+<li><strong>Sustentabilidade</strong> - Priorizamos sempre o gosto do cliente e um ambiente aconchegante.</li>
+</ul>
+</p>
+<p>
+                    Esses princípios reforçam nossa empresa como um ponto de encontro para quem busca Felicidade, amizade e parceria.
+                </p>
+</div>
+</div>
+</div>
+<!-- Rodapé -->
+<div class="footer">
+<div class="footer-content">
+<div class="footer-left">
+<p>WhatsApp</p>
+<a href="https://wa.link/gr14gl" target="_blank">Serv-festa Oficial</a>
+<p>Instagram</p>
+<a href="https://www.instagram.com/_victormantovani_/" target="_blank">@_victormantovani_</a>
+</div>
+<div class="footer-center">
+<p>Endereço</p>
+<p>Av. Brg. Faria Lima - 5160</p>
+<p>Vila São José, São José do Rio Preto - SP, 15090-000</p>
+</div>
+<div class="footer-right">
+<a href="https://maps.app.goo.gl/2p8JEtZ17ZbgXLUA7" target="_blank">Veja no Google Maps</a>
+</div>
+</div>
+</div>
+<style>
+    /* Estilo atualizado para a seção com imagem e texto ao lado */
+    .imagem-texto {
+        display: flex;
+        align-items: flex-start;
+        margin-top: 40px;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .imagem-texto img {
+        width: 300px;
+        height: auto;
+        object-fit: cover;
+        margin-right: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .texto-lado {
+        max-width: 600px;
+        font-size: 16px;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .texto-lado h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+        color: #222;
+    }
+
+    .texto-lado p, .texto-lado ul {
+        margin-bottom: 10px;
+    }
+
+    .texto-lado ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .texto-lado ul li {
+        padding: 5px 0;
+        font-weight: 500;
+    }
+</style>
+</body>
+</html>
+<link href="css/estilo pagina principal.css" rel="stylesheet"/> <!-- Link para o seu CSS -->

@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+}
+
+.header {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.header h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Estilização da barra lateral */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 80px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    transition: background 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+}
+
+.sidebar i {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.sidebar span {
+    font-size: 12px;
+}
+
+/* Submenu para Vestes */
+.submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #111;
+    width: 100%;
+}
+
+.sidebar a:hover + .submenu, .submenu:hover {
+    display: flex;
+}
+
+.submenu a {
+    padding: 10px 0;
+    font-size: 10px;
+    color: white;
+}
+
+/* Ajuste para o espaço da barra lateral */
+.main-content {
+    margin-left: 80px;
+    padding: 20px;
+}
+
+/* Linha abaixo do título */
+hr {
+    margin: 0;
+    border: 1px solid #000;
+    width: 100%;
+}
+
+/* Seção de produtos mais vendidos */
+.mais-vendidos, .mais-populares {
+    margin-top: 40px;
+}
+
+.mais-vendidos h2, .mais-populares h2 {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+/* Estilos de imagens com contorno e sombra */
+.produtos-imagens {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.produtos-imagens img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border: 2px solid #ccc; /* Contorno ao redor da imagem */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra ao redor */
+    transition: transform 0.2s;
+}
+
+.produtos-imagens img:hover {
+    transform: scale(1.05); /* Zoom suave ao passar o mouse */
+}
+
+/* Seção de produtos mais populares */
+.mais-populares-linha {
+    margin-top: 20px;
+}
+
+/* Estilo para a última seção com imagem e texto */
+.imagem-texto {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.imagem-texto img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 2px solid #ccc; /* Contorno */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Sombra */
+}
+
+.texto-lado {
+    max-width: 600px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Rodapé */
+.footer {
+    background-color: #000;
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px; /* para alinhar com o conteúdo principal */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.footer-left p, .footer-center p {
+    margin: 5px 0;
+}
+
+.footer-right img {
+    object-fit: cover;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+/* Media Queries */
+
+/* Dispositivos móveis (celulares) */
+@media (max-width: 767px) {
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+  }
+  .suplementos-imagens {
+    flex-direction: column;
+  }
+  .suplementos-imagens img {
+    width: 100%;
+  }
+}
+
+/* Dispositivos tablet (tela entre 768px e 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .sidebar {
+    width: 200px;
+  }
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+/* Dispositivos computadores (tela maior que 1024px) */
+@media (min-width: 1025px) {
+  .sidebar {
+    width: 80px;
+  }
+  .main-content {
+    margin-left: 80px;
+  }
+}
